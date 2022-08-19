@@ -22,8 +22,11 @@ class FuncZip:
     def __call__(self) -> Any:
         return self.func(*self.args, **self.kwargs)
 
+
 def zip(*args, **kwargs):
     """Decorator for funczip.FuncZip"""
+
     def Inner(func):
         return FuncZip(func, *args, **kwargs)
+
     return Inner
