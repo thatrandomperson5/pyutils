@@ -12,7 +12,7 @@ print(z)
 z()
 
 
-@funcxip.zip("Hello world")
+@funczip.zip("Hello world")
 def bar(val):
     print(val)
 
