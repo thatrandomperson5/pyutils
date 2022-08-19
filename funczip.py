@@ -1,7 +1,7 @@
 from typing import Callable, Any
 
 
-class funczip:
+class FuncZip:
     def __init__(self, func: Callable, *args: Any, **kwargs: Any):
         self.func = func
         self.args = args
@@ -21,3 +21,9 @@ class funczip:
 
     def __call__(self) -> Any:
         return self.func(*self.args, **self.kwargs)
+
+def zip(*args, **kwargs):
+    """Decorator for funczip.FuncZip"""
+    def Inner(func):
+        return FuncZip(func, *args, **kwargs)
+    return Inner
