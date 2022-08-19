@@ -2,11 +2,19 @@
 import funczip
 
 
-def lol(val, **kwargs):
+def foo(val, **kwargs):
     print(val)
     print(kwargs)
 
 
-z = funczip.funczip(lol, "hello world", a="9", b=10)
+z = funczip.FuncZip(foo, "hello world", a="9", b=10)
 print(z)
 z()
+
+@funcxip.zip("Hello world")
+def bar(val):
+    print(val)
+    
+bar()
+
+#What is the purpose of this? well it can make testing eaiser. To remove the automatic args you just tak off the decorator!
