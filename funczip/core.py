@@ -6,7 +6,7 @@ class FuncZip:
         self.func: Callable = func
         self.args: Any = args
         self.kwargs: Any = kwargs
-        self.modifiers:List[Callable]  = []
+        self.modifiers: List[Callable] = []
 
     def __str__(self) -> str:
         a = [f"{x}" for x in self.args]
@@ -19,8 +19,10 @@ class FuncZip:
 
         k = [f"{x}={y}" for x, y in self.kwargs.items()]
         return f"<funczip target={self.func.__name__} arguments={', '.join(a+k)}>"
+
     def add_mod(self, mod: Callable):
         self.modifiers.append(mod)
+
     def __call__(self) -> Any:
         return self.func(*self.args, **self.kwargs)
 
