@@ -3,6 +3,7 @@ Just some random python utils, idk
 
 
 ## List of things
-* funczip
+* [funczip](https://github.com/thatrandomperson5/pyutils#funczip)
 
 # Funczip
+Just a function zipped with arguments.
