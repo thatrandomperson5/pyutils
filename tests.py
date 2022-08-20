@@ -11,16 +11,20 @@ z = funczip.FuncZip(foo, "hello world", a="9", b=10)
 print(z)
 z()
 
+
 class Remote:
-    def __init__(self,*args, **kwargs):
+    def __init__(self, *args, **kwargs):
         self.args = args
         self.kwargs = kwargs
+
     def add(self, func):
         func.args += self.args
         func.kwargs.update(self.kwargs)
         return func
 
+
 r = Remote("a", "b")
+
 
 @funczip.mod(r.add)
 @funczip.zip("Hello world")
