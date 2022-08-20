@@ -52,9 +52,9 @@ def mod(mod_: Callable) -> Callable:
 
     def Inner(fz: FuncZip) -> FuncZip:
         if type(fz) != FuncZip:
-           fz = FuncZip(fz)
+            fz = FuncZip(fz)
         fz.add_mod(mod_)
-      
+
         return fz
 
     return Inner
