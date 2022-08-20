@@ -40,9 +40,13 @@ def zip(*args: Any, **kwargs: Any) -> Callable:
         return FuncZip(func, *args, **kwargs)
 
     return Inner
+
+
 def mod(mod_: Callable) -> Callable:
     """Sub decorator for funczip.zip. Adds a modifier"""
+
     def Inner(fz: FuncZip) -> FuncZip:
         fz.add_mod(mod_)
         return fz
+
     return Inner
