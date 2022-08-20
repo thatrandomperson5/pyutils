@@ -20,9 +20,10 @@ class FuncZip:
         k = [f"{x}={y}" for x, y in self.kwargs.items()]
         return f"<funczip target={self.func.__name__} arguments={', '.join(a+k)}>"
 
-    def add_mod(self, mod: Callable)->None:
+    def add_mod(self, mod: Callable) -> None:
         self.modifiers.append(mod)
-    def del_mod(self, mod: Callable)->None:
+
+    def del_mod(self, mod: Callable) -> None:
         self.modifiers.remove(mod)
 
     def __call__(self) -> Any:
