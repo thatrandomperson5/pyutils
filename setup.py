@@ -12,7 +12,6 @@ if 1:
     )
 
 setup(
-    script_args=copy_args,
     author="ThatRandomPerson5",
     **args,
 )
