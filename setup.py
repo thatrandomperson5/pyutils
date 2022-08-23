@@ -6,7 +6,7 @@ import sys
 global args
 args = {}
 copy_args = sys.argv[1:]
-if "-t=funczip" in copy_args:
+if "--targetv=funczip" in copy_args:
     copy_args.remove("-t=funczip")
     args = dict(
         name="funczip",
