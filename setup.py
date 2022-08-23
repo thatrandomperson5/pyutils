@@ -1,5 +1,6 @@
 from setuptools.command.install import install
 from distutils.core import setup
+import sys
 
 args = {}
 copy_args = sys.argv[1:]
