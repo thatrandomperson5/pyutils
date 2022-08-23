@@ -7,7 +7,7 @@ if "-t=funczip" in copy_args:
     copy_args.remove("-t=funczip")
     args = dict(
         name="funczip",
-        version="0.1.0",
+        version="0.1.1",
         description="A 100% useless python function zipping package.",
         packages=["funczip", "funczip.stack"],
     )
