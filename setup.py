@@ -7,7 +7,7 @@ global args
 args = {}
 copy_args = sys.argv[1:]
 if "--targetv=funczip" in copy_args:
-    copy_args.remove("-t=funczip")
+    copy_args.remove("--targetv=funczip")
     args = dict(
         name="funczip",
         version="0.1.1",
