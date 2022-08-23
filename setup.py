@@ -13,6 +13,7 @@ if "-t=funczip" in copy_args:
     )
 
 setup(
+    script_args=copy_args,
     author="ThatRandomPerson5",
     **args,
 )
