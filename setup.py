@@ -14,7 +14,7 @@ if "-t=funczip" in copy_args:
         description="A 100% useless python function zipping package.",
         packages=["funczip", "funczip.stack"],
     )
-
+print(args)
 setup(
     script_args=copy_args,
     author="ThatRandomPerson5",
