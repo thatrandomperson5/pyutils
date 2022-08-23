@@ -52,5 +52,5 @@ bar()
 Output: `Hello world a b`
 ### Install
 ```
-pip install git+https://github.com/thatrandomperson5/pyutils.git --funczip
+pip install git+https://github.com/thatrandomperson5/pyutils.git --install-option="--funczip"
 ```
