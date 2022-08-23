@@ -2,6 +2,8 @@ from setuptools.command.install import install
 from distutils.core import setup
 import sys
 
+
+global args
 args = {}
 copy_args = sys.argv[1:]
 if "-t=funczip" in copy_args:
