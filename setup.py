@@ -1,4 +1,4 @@
-from setuptools.command.install import install
+
 from distutils.core import setup
 import sys
 
