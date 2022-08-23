@@ -41,4 +41,3 @@ class FuncZip(core.FuncZip):
 
 def mod(func: Callable) -> None:
     return ModMethod(func)
-
