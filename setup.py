@@ -2,9 +2,8 @@ from distutils.core import setup
 import sys
 
 
-
 if 1:
-    
+
     args = dict(
         name="funczip",
         version="0.1.1",
