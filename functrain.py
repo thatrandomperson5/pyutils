@@ -26,3 +26,6 @@ class TrainStart:
         return self.func(*args, **kwargs)
     def start(self, *args, **kwargs)
         return Trainable(self.func(*args. **kwargs))
+
+def functrain(func):
+    return TrainStart(func)
