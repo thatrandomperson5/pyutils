@@ -17,15 +17,18 @@ class Trainable:
 
     def end(self):
         return self.value
-    
-    
+
+
 @dataclass
 class TrainStart:
     func: Callable
+
     def __call__(self, *args, **kwargs):
         return self.func(*args, **kwargs)
+
     def start(self, *args, **kwargs):
         return Trainable(self.func(*args, **kwargs))
+
 
 def functrain(func):
     return TrainStart(func)
